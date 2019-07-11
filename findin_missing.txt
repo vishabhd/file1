@@ -1,0 +1,53 @@
+package ewei;
+import java.util.*;
+public class finding_missing {
+	    public static void main(String[] args)
+	    {
+	        int i,a=0;
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter first size");
+	        int size1 = sc.nextInt();
+	        System.out.println("Enter first array elements");
+	        int arr1[] = new int[size1];
+	        for(i=0;i<size1;i++)
+	        {
+	            arr1[i] = sc.nextInt();
+	        }
+	        System.out.println("Enter the second size");
+	        int size2 = sc.nextInt();
+	        System.out.println("Enter second array elements");
+	        int arr2[] = new int[size2];
+	        for(i=0;i<size2;i++)
+	        {
+	            arr2[i] = sc.nextInt();
+	        }
+	        int arr[] = new int[arr2.length - arr1.length];
+	        Arrays.sort(arr1);
+	        Arrays.sort(arr2);
+	        int index = 0;
+	        for(i=0;i<arr2.length;i++)
+	        {
+	            while(index<arr1.length)
+	            {
+	                if(arr2[i] == arr1[index])
+	                {
+	                    index++;
+	                    break;
+	                }
+	                else
+	                {
+	                    arr[a] = arr2[i];
+	                    a++;
+	                    break;
+	                }
+	            }
+	        }
+	        System.out.println("The missing elements in ascending order are:");
+	        for(i=0;i<arr.length;i++)
+	        {
+	            System.out.print(arr[i]);
+	            System.out.print(" ");
+	        }
+	    }
+	}
+
