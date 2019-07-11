@@ -1,0 +1,42 @@
+package ewei;
+import java.util.*;
+public class revar {
+    public static void main(String[] args)
+    {
+        int i;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of string array");
+        int size_str = sc.nextInt();
+        String arr1[] = new String[size_str];
+        for(i=0;i<size_str;i++)
+        {
+        	System.out.println("Enter element");
+        	arr1[i] = sc.next();
+        }
+        System.out.println("Enter the query size");
+        int size_qr = sc.nextInt();
+        String arr2[] = new String[size_qr];
+        System.out.println("Enter the query elements");
+        for(i=0;i<size_qr;i++)
+        {
+            arr2[i] = sc.next();
+        }
+        for(i=0;i<size_qr;i++)
+        {
+            int a = 0,count = 0;
+            while(a < size_str)
+            {
+               if(arr2[i].compareTo(arr1[a]) == 0)
+               {
+                   count++;
+                   a++;
+               }
+                else
+                {
+                    a++;
+                }
+            }
+            System.out.println(count);
+        }
+    }
+}

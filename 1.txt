@@ -1,0 +1,22 @@
+package ewei;
+interface ab{
+	public void want();
+}
+interface cd extends ab{
+	public void what();
+}
+public class main1 implements ab,cd {
+	public void want()
+	{
+		System.out.println("I want vishabh");
+	}
+	public void what()
+	{
+		System.out.println("No we have vishabh");
+	}
+	public static void main(String[] args)
+	{
+		cd obj1 = new main1();
+		obj1.want();
+	}
+}

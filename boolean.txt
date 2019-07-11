@@ -1,0 +1,18 @@
+package ewei;
+import java.util.Scanner;
+public class boolean11 {
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		boolean a1 = true;
+		boolean a2 = false;
+		System.out.println("Question is " + a1);
+		System.out.println("Question is " + a2);
+		a2 = true;;
+		if(!a2)
+			System.out.println("Hello vishabh here");
+		if(!a1)
+			System.out.println("Hello dhawan here");
+	}
+
+}

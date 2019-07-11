@@ -1,0 +1,32 @@
+package ewei;
+
+import java.util.Scanner;
+
+public class palind {
+	public static void main(String[] args)
+	{
+		char temp;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string");
+		String str = sc.next();
+		char arr[] = str.toCharArray();
+		int a = 0;
+		int b = arr.length - 1;
+		while(a < b)
+		{
+			temp = arr[a];
+			arr[a] = arr[b];
+			arr[b] = temp;
+			a++;
+			b--;
+		}
+		String str1 = new String(arr);
+		if(str.compareTo(str1) == 0)
+		{
+			System.out.println("Palindrome");
+		}
+		else
+			System.out.println("Not");
+	}
+
+}
